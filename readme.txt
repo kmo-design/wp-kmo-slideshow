@@ -41,7 +41,7 @@ This plugin uses SlidesJS 3.0.3 by Nathan Searles - http://www.slidesjs.com
 1. Upload the kmo-slideshow directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Upload a folder of pictures to 'wp-content/upload/gallery'
-5. Insert the following short code in post or page:
+4. Insert the following short code in post or page:
 
 	[kmoslideshow folder="wp-content/upload/gallery"]
 
