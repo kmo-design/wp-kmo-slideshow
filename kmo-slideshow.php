@@ -75,7 +75,6 @@ class kmo_slideshow{
 		), $atts ) );
 
 		$folder = rtrim( $folder, '/' );
-        $handle = preg_replace("/[^a-zA-Z]/", "", $folder);
 
 		if ( !is_dir( $folder ) ) {
 			return '<p style="color:red;"><strong>Error: </strong>Unable to find the directory ' . $folder . '</p>' ;
@@ -88,7 +87,8 @@ class kmo_slideshow{
 			return '<p style="color:red;"><strong>Error: </strong>No images found in '. $folder . '</p>';
 		}
 
-                $start = rand(0, $NoP - 1);
+        $start = rand(0, $NoP - 1);
+        $handle = preg_replace("/[^a-zA-Z]/", "", $folder) . '_' . $start;
 
 		// Image size required by SlidesJS
 		$size = getimagesize( $folder . '/' . $pictures[0] );
